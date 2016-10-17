@@ -17,6 +17,11 @@ def name(name):
 def get():
 	var = request.args.get("firstname")
 	return var
+
+@app.route("/firstnamepost", methods =["POST"])
+def post():
+	var = request.form["firstname"]
+	return var
 	
 if __name__ == "__main__":
 	app.run()
